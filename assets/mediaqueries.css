@@ -1,0 +1,134 @@
+@media (max-width: 900px){
+    
+    .circle{
+        display: none;
+    }
+
+    .circle2{
+        display: none;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .nav{
+        margin-right: 0px;
+    }
+
+    header .nav a{
+        color: #ddd;
+    }
+    
+    .button{
+        margin-top: 1.5em;
+    }
+
+    .banner{
+        background-color: #0B0E11;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .banner .img img{
+        max-width: 300px;
+
+        margin-right: 0;
+    }
+
+    .hero1, .hero2, .hero3{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    
+    .hero1 h1{
+        font-size: 1em;
+    }
+
+    .hero2 h1{
+        font-size: 1em;
+    }
+
+    .hero3 h1{
+        font-size: 1em;
+    }
+    
+
+    .hero-image{
+        width: 15em;
+    }
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .card1, .card2, .card3{
+       margin-bottom: 20px;
+    }
+
+    .formulario{
+        margin: 20px;
+    }
+
+    .formulario img{
+        display: none;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    form label{
+        margin-top: 15px;
+    }
+
+    form input[type=text], input[type=mensage], input[type=submit]{
+        max-width: 200px;
+    
+    }
+
+    .contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contents h2{
+        margin-top: 20px;
+    }
+
+    .socialmedias img{
+        width: 20px;
+        height: 20px;
+    }
+    .banner .text h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    .banner .text p{
+        text-align: center;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -50;
+    }
+    .banner .text #botao1{
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1000px){
+    .banner .text{
+        margin-left: 40px;
+    }
+}

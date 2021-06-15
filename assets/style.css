@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=IBM+Plex+Sans:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+header{
+    background-color: #12161C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .logo strong{
+    color: #F3CF34;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+header .logo a{
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 700;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+header .nav{
+    word-spacing: 30px;
+}
+
+header .nav a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+header .button a{
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #F3CF34;
+    color: #212833;
+    border-radius: 10px;
+
+}
+
+.banner{
+    background-color: #0B0E11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.banner .text{
+  
+    line-height: 40px;
+}
+
+.banner .text h1{
+    color: #ddd;
+    font-size: 2.9em;
+}
+
+.banner .text .buttons{
+    margin-top: 30px;
+    
+}
+
+.banner .text #botao1{
+    background-color: #F3CF34;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #212833;
+}
+
+.banner .text #botao2{
+    border: 2px solid #F3CF34;
+    padding: 8px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #F3CF34;
+   
+}
+
+.banner .text p{
+    color: #9999A6;
+    font-size: .8em;
+}
+
+.banner .img img{
+    width: 500px;
+    margin-right: 90px;
+}
+
+/* -------------------------------------------- */ 
+
+.hero1{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero1 h1{
+    font-size: 2em;
+    max-width: 435px;
+    text-align: start;
+    color: #1E2329;
+}
+
+.hero1 p{
+    max-width: 400px;
+    text-align: justify;
+    color: #474D57;
+}
+
+.hero1-video{
+    padding: 50px;
+}
+
+/* -------------------------------------------- */ 
+
+.hero2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hero2 h1{
+    font-size: 2em;
+    max-width: 435px;
+    text-align: start;
+    color: #1E2329;
+}
+
+.hero2 p{
+    max-width: 400px;
+    text-align: justify;
+    color: #474D57;
+}
+
+/* -------------------------------------------- */ 
+
+.hero3{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hero3 h1{
+    font-size: 2em;
+    max-width: 435px;
+    text-align: start;
+    color: #1E2329;
+}
+
+.hero3 p{
+    max-width: 400px;
+    text-align: justify;
+    color: #474D57;
+}
+
+/* -------------------------------------------- */ 
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-image: url("images/contato.png");
+    
+}
+
+.cards .card1, .card2, .card3{
+    transition: all .2s cubic-bezier(0.4, 0, 1, 1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    max-width: 250px;
+    margin: 20px;
+    background-color: #12161C;
+    height: 200px;
+}
+
+.cards .card1:hover{
+    transform: scale(1.07);
+}
+
+.cards .card2:hover{
+    transform: scale(1.07);
+}
+
+.cards .card3:hover{
+    transform: scale(1.07);
+}
+
+
+.cards h1{
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.cards p{
+    text-align: justify;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.cards a{
+    text-decoration: none;
+    color: #12161C;
+    background-color: #F3CF34;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.services .title{
+    color: #1E2329;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+/* ---------------------------------------------------- */
+
+.title3{
+    margin: 60px 0px 30px 0px;
+    text-align: center;
+    font-size: 2em;
+    color: #1E2329;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #F3CF34;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: -4px 4px 25px rgba(255, 238, 4, 0.726);
+    width: 300px;
+    
+}
+
+form label{
+    margin-top: 10px;
+}
+
+form input[type=text], input[type=mensage]{
+    border-radius: 5px;
+    border: 2px solid #F3CF34;
+    color: #1E2329;
+}
+
+
+form input[type="submit"]{
+    border: none;
+    padding: 10px 50px;
+    border-radius: 4px;
+    color: #FFF;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #F3CF34;
+    border-radius: 10px;
+    color: #1E2329;
+    
+}
+
+footer{
+    background-color: #0B0E11;
+    padding: 50px;
+}
+
+.contents{
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+}
+
+.contents a{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: lighter;
+}
+
+.socialmedias{
+    display: flex;
+    justify-content: center;
+}
+
+.socialmedias img{
+    width: 40px;
+    height: 40px;
+    background-color: #F3CF34;
+    border-radius: 10%;
+    margin: 40px 10px;
+    padding: 10px;
+}
+
+/* ----------------------------------- */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #F3CF34;
+    color: #0B0E11;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    background-color:#c4a106;
+}
+button img{
+    width: 25px;
+}

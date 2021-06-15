@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=IBM+Plex+Sans:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+}
+
+:root{
+    --primary-color: #F3CF34;
+    --background-color: #12161C;
+    --up-variation-color: #87d883;
+    --down-variation-color: #f55a5f;
+    --texts-color: rgb(145, 145, 145);
+    --title-colors: #12161C; 
+}
+
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #0B0E11;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: #ddd;
+}
+
+header .logo strong{
+    color: #F3CF34;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+header .logo a{
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 700;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.logout{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logout svg{
+    stroke: #F3CF34;
+    width: 30px;
+    height: 30px;
+    stroke-width: 2;
+}
+
+.container-dados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dados{
+    text-align: center;
+}
+
+.dados h1{
+    font-size: 1.5em;
+    margin-top: 40px;
+    color: #FFF;
+}
+
+table{
+    color: var(--title-colors);
+    border: none;
+}
+
+th{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+td{
+    background-color: #ddd;
+    padding: 10px 20px;
+ 
+}
