@@ -3,6 +3,7 @@
 require 'db_connection.php';
 require 'validatesession.php';
 
+
 ?>
 
 <!DOCTYPE html>
@@ -63,41 +64,56 @@ require 'validatesession.php';
 
         <div class="main">
             <div class="addstock">
-                <label>
-                    <input id="real" type="text" placeholder="Digite o código da ação">
+                <form action="addinteresses.php" method="post">
+                    <input id="real" name="interesse" type="text" placeholder="Digite o código da ação">
                     <input type="submit" value="Adicionar">
-                </label>
+                </form>
             </div>
 
             <div class="container-cards">
                 <div class="cards">
-                    <div class="card-up">
-                        <div class="card-header"> 
-                            <h2 class="stockcode">SANB11</h2>
-                            <p class="date">14/06/2021</p>
-                        </div>
-                    
-                        <span class="price">R$ 38,18</span>
-                        <span class="variation"> + 0,23% </span>
-                    </div>
+                    <?php
+    
+                    $id = $_SESSION['id'];
+                    $select = $conn->query("SELECT * FROM interesses WHERE id_usuario = '$id'");
 
-                    <div class="card-up">
-                        <div class="card-header"> 
-                            <h2 class="stockcode">BIDI4</h2>
-                            <p class="date">14/06/2021</p>
-                        </div>
-                        <span class="price">R$ 43,70</span>
-                        <span class="variation"> + 7,38% </span>
-                    </div>
+                    foreach($select as $item){
+                        $response = file_get_contents('https://api.hgbrasil.com/finance/stock_price?key=0631bf81&symbol='.$item['symbol']);
+                        
+                        $response = json_decode($response);
 
-                    <div class="card-down">
-                        <div class="card-header"> 
-                            <h2 class="stockcode">OIBR3</h2>
-                            <p class="date">14/06/2021</p>
-                        </div>
-                        <span class="price">R$ 14,05</span>
-                        <span class="variation"> - 1,35% </span>
-                    </div>
+                        if($response->results->$item['symbol']->change_percent < 0){
+                            echo '<div class="card-down">';
+                        }else{
+                            echo '<div class="card-up">';
+                        }
+
+
+                        echo '<h1>';
+                        echo($response->results->$item['symbol']->symbol).'<br>';
+                        echo '</h1>';
+
+                        echo '<h2>';
+                        echo($response->results->$item['symbol']->name).'<br>';
+                        echo '</h2>';
+
+                        echo '<span class="price">R$';
+                        echo($response->results->$item['symbol']->price).'<br>';
+                        echo '</span>';
+
+                        echo '<span class="variation">';
+                        echo($response->results->$item['symbol']->change_percent).'%<br>';
+                        echo '</span>';
+
+                        echo '<span class="date">';
+                        echo($response->results->$item['symbol']->updated_at).'<br>';
+                        echo '</span>';
+
+                        echo '</div>';
+                    }
+
+                    ?>
+
                 </div>
             </div>
         
@@ -154,8 +170,6 @@ require 'validatesession.php';
             </script>
         </div> -->
     </div>
-
-    
 
 </body>
 </html>
