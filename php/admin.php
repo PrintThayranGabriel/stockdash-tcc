@@ -35,6 +35,34 @@ function get_all_data($conn){
     }
 }
 
+function get_all_stocks($conn){
+  $get_data = mysqli_query($conn,"SELECT * FROM `interesses`");
+  if(mysqli_num_rows($get_data) > 0){
+    echo '<div class="container-dados"><table>
+    <tr>
+    <th>ID</th>
+    <th>Código da ação</th>
+    <th>Id Usuário</th>
+    <th>created_at</th>
+    <th>updated_at</th>
+    </tr>';
+    while($row = mysqli_fetch_assoc($get_data)){
+      
+      echo '<tr class="dados">
+      <td>'.$row['id'].'</td>
+      <td>'.$row['symbol'].'</td>
+      <td>'.$row['id_usuario'].'</td>
+      <td>'.$row['created_at'].'</td>
+      <td>'.$row['updated_at'].'</td>
+           </tr>';
+
+       }
+       echo '</table>';
+     }else{
+       echo "<h3>Nenhum registro encontrado. Por favor insira alguns registros.</h3>";
+    }
+}
+
 
 ?>
 
@@ -69,8 +97,13 @@ function get_all_data($conn){
   </header>
 
   <div class="dados">
-    <?='<h1 class="title">Quantidade de usuários: ',$contador['numero_registros']; ?>
+    <?='<h1 class="title">Quantidade de usuários: ',$contador['numero_registros'].'</h1>' ?>
     <?=get_all_data($conn); ?>
+  </div>
+
+  <div class="dados">
+    <h1 class="title">Ações cadastradas</h1>
+    <?=get_all_stocks($conn); ?> 
   </div>
 
 
