@@ -172,6 +172,7 @@ header{
     transition: all .3s cubic-bezier(.25,.8,.25,1);
     text-align: center;
     min-width: 200px;
+    max-height: 190px;
 }
 
 .card-down{
@@ -187,7 +188,7 @@ header{
     transition: all .3s cubic-bezier(.25,.8,.25,1);
     text-align: center;
     min-width: 200px;
-    
+    max-height: 190px;
 }
 
 .card-up:hover{

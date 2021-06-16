@@ -78,11 +78,12 @@ require 'validatesession.php';
                     $select = $conn->query("SELECT * FROM interesses WHERE id_usuario = '$id'");
 
                     foreach($select as $item){
-                        $response = file_get_contents('https://api.hgbrasil.com/finance/stock_price?key=0631bf81&symbol='.$item['symbol']);
+                        $response = file_get_contents('https://brapi.ga/api/quote/'.$item['symbol']);
                         
+   
                         $response = json_decode($response);
 
-                        if($response->results->$item['symbol']->change_percent < 0){
+                        if($response->results[0]->regularMarketChange < 0){
                             echo '<div class="card-down">';
                         }else{
                             echo '<div class="card-up">';
@@ -90,23 +91,23 @@ require 'validatesession.php';
 
 
                         echo '<h1>';
-                        echo($response->results->$item['symbol']->symbol).'<br>';
+                        echo $response->results[0]->symbol;
                         echo '</h1>';
 
                         echo '<h2>';
-                        echo($response->results->$item['symbol']->name).'<br>';
+                        echo $response->results[0]->longName;
                         echo '</h2>';
 
-                        echo '<span class="price">R$';
-                        echo($response->results->$item['symbol']->price).'<br>';
+                        echo '<span class="price">R$ ';
+                        echo $response->results[0]->regularMarketPrice;
                         echo '</span>';
 
                         echo '<span class="variation">';
-                        echo($response->results->$item['symbol']->change_percent).'%<br>';
+                        echo number_format($response->results[0]->regularMarketChange, 2, '.', '').'%';
                         echo '</span>';
 
                         echo '<span class="date">';
-                        echo($response->results->$item['symbol']->updated_at).'<br>';
+                        echo 'Atualizado em <br>' . date('d/m/Y', strtotime($response->results[0]->regularMarketTime));
                         echo '</span>';
 
                         echo '</div>';
