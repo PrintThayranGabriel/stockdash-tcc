@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="image">
-            <img src="/meutcc/images/404.png" alt="">
+            <img src="https://i.ibb.co/D5JVJPB/404.png" alt="">
         </div>
         <div class="text">
             <h1>Erro 404</h1>

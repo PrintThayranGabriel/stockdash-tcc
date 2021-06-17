@@ -83,6 +83,7 @@ require 'validatesession.php';
                 <form action="addinteresses.php" method="post">
                     <input id="real" name="interesse" type="text" placeholder="Digite o código da ação">
                     <input type="submit" value="Adicionar">
+                    <p>Consulte nossa <a href="">lista de ações</a></p>
                 </form>
             </div>
 

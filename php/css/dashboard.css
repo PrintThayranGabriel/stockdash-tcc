@@ -71,11 +71,11 @@ header{
 }
 
 
-
 .container-sidebar .logo strong{
     color: #F3CF34;
     font-weight: 700;
     font-size: 30px;
+    border-bottom: 1px solid #ddd;
 }
 
 .container-sidebar .logo a{
@@ -84,6 +84,7 @@ header{
     font-weight: 700;
     font-size: 30px;
     font-weight: bold;
+    border-bottom: 1px solid #ddd;
 }
 
 
@@ -131,6 +132,16 @@ header{
     align-items: center;
 }
 
+.addstock p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.addstock a{
+    color: var(--texts-color);
+    cursor: pointer;
+}
+
 .addstock input[type="text"]{
     border: 1px solid var(--background-color);
     font-size: 1em;
@@ -156,6 +167,7 @@ header{
 
 .cards{
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
 }
 
