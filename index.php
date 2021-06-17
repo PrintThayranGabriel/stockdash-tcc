@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +27,7 @@
         </div>
 
         <div class="button">
-            <a href="#">Entrar</a>
+            <a href="php/index.php">Entrar</a>
         </div>
     </header>
 
@@ -38,7 +42,7 @@
         </div>
 
         <div class="img">
-            <img src="/images/Financial data-bro.png">
+            <img src="./images/banner.png">
         </div>
     </section>
 
@@ -59,7 +63,7 @@
             <p>Veja como andam as suas ações em uma única dashboard!.</p>
         </div>
         <div>
-            <img class="hero-image" src="/images/hero2.png" width="500px">
+            <img class="hero-image" src="./images/hero2.png" width="500px">
         </div>
     </section>
 
@@ -69,7 +73,7 @@
             <p>Seja notificado quando um ativo estiver com um bom preços.</p>
         </div>
         <div>
-            <img class="hero-image" src="/images/hero3.png" width="500px">
+            <img class="hero-image" src="./images/hero3.png" width="500px">
         </div>
     </section>
 
@@ -110,7 +114,7 @@
                 <input type="submit" value="Enviar">
             </form>
     
-            <img src="/images/contato.png" width="600px">
+            <img src="./images/contato.png" width="600px">
         </div>
     </section>
 
@@ -148,10 +152,10 @@
         </div>
 
         <div class="socialmedias">
-            <img src="/images/facebook.png" >
-            <img src="/images/instagram.png" >
-            <img src="/images/twitter.png" >
-            <img src="/images/youtube.png" >
+            <img src="./images/facebook.png" >
+            <img src="./images/instagram.png" >
+            <img src="./images/twitter.png" >
+            <img src="./images/youtube.png" >
         </div>
     </footer>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/up-arrow.png"></button>

@@ -12,14 +12,27 @@ require 'validatesession.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="stockdash-tcc/images/favicon.ico"/>
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Dashboard</title>
 </head>
 <body>
 
+    <!-- início do preloader -->
+    <div id="preloader">
+        <div class="inner">
+        <!-- HTML DA ANIMAÇÃO-->
+        <div class="bolas">
+            <div></div>
+            <div></div>
+            <div></div>                    
+        </div>
+        </div>
+    </div>
+    <!-- fim do preloader --> 
+
     <div class="container">
         <div class="container-sidebar">
-            
             <div class="menu">
                 <div class="logo">
                     <a href="#"><strong>Stock</strong>Dash</a>
@@ -41,10 +54,9 @@ require 'validatesession.php';
                     <img src="/meutcc/images/news.png" alt="">
                     <a href="#">Notícias</a>
                 </div>
-                </div>
-                
-            </div>
+            </div>     
         </div>
+    </div>
 
     <div class="container-content">
         <header>
@@ -121,60 +133,18 @@ require 'validatesession.php';
 
                 </div>
             </div>
-        
-        
-        <!-- <div class="container-chart">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <canvas id="myChart"></canvas>
-
-            <script>
-
-            var ctx = document.getElementById('myChart');
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var ctx = $('#myChart');
-            var ctx = 'myChart';
-
-            </script>
-                <script>
-                var ctx = document.getElementById('myChart');
-                var myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['25','26/05','27/05','28/05','29/05','30/05','31/05','01/06', '02/06', '03/06', '04/06', '05/06', '06/06','07/06','08/06'],
-                        datasets: [{
-                            label: 'Rentabilidade Geral',
-                            data: [50, 20, 30, 50, 20, 30,75,50, 20, 30, 50, 20, 30,75,10],
-                            backgroundColor: [
-                                '#F3CF34',
-                            ],
-                            borderColor: [
-                                'rgb(0,0,0)',
-                                'rgb(0,0,0)',
-                                'rgb(0,0,0)',
-                                'rgb(0,0,0)',
-                                'rgb(0,0,0)',
-                                'rgb(0,0,0)',
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-
-                        }
-                        
-                        
-                    }
-                });
-            </script>
-        </div> -->
+        </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+    $(window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow'); 
+        $('body').delay(350).css({'overflow': 'visible'});
+    })
+  </script>
 
 </body>
 </html>
