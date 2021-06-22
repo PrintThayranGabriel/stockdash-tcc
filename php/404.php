@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/meutcc/images/favicon.ico"/>
     <link rel="stylesheet" href="css/404.css">
     <title>Página não encontrada</title>
 </head>
 <body>
     <div class="container">
         <div class="image">
-            <img src="https://i.ibb.co/D5JVJPB/404.png" alt="">
+            <img src="/meutcc/images/404.png" alt="">
         </div>
         <div class="text">
             <h1>Erro 404</h1>

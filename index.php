@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/mediaqueries.css">
+    <link rel="shortcut icon" href="/meutcc/images/favicon.ico"/>
     <title>StockDash</title>
 </head>
 <body>
@@ -158,7 +159,7 @@
             <img src="./images/youtube.png" >
         </div>
     </footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/up-arrow.png"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/arrowup.png"></button>
     <script src="assets/app.js"></script>
 </body>
 </html>

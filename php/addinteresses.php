@@ -1,4 +1,9 @@
 <?php
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+?>
+
+<?php
 require 'db_connection.php';
 require 'validatesession.php';
 
@@ -9,7 +14,7 @@ $response = file_get_contents('https://brapi.ga/api/quote/'. $interesse);
 
 if(empty($response)) {
     echo "<script>
-    alert('Essa Ação não existe');
+    alert('Essa Ação não existe - Consulte nossa lista de ações');
     window.location.href = 'dashboard.php';
     </script>";
     return;

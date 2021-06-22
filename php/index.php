@@ -2,8 +2,9 @@
 <head>
 <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StockDash</title>
-        <link rel="stylesheet" href="css/login.css">
+   <link rel="shortcut icon" href="/meutcc/images/favicon.ico"/>
+   <link rel="stylesheet" href="css/login.css">
+   <title>StockDash</title>
 </head>
 <body>
 

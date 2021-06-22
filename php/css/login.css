@@ -49,6 +49,7 @@ input[type="text"],input[type="password"]{
     text-align: center;
     margin: 15px 0px 10px 0px;
     color: #1E2329;
+    border-radius: 5px;
 }
 
 .sign-in{

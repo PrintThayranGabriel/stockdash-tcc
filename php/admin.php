@@ -1,4 +1,9 @@
 <?php
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+?>
+
+<?php
   require 'db_connection.php';
   require 'validatesession.php';
   require 'validaterole.php';
@@ -43,8 +48,7 @@ function get_all_stocks($conn){
     <th>ID</th>
     <th>Código da ação</th>
     <th>Id Usuário</th>
-    <th>created_at</th>
-    <th>updated_at</th>
+    <th>Ações</th>
     </tr>';
     while($row = mysqli_fetch_assoc($get_data)){
       
@@ -52,9 +56,8 @@ function get_all_stocks($conn){
       <td>'.$row['id'].'</td>
       <td>'.$row['symbol'].'</td>
       <td>'.$row['id_usuario'].'</td>
-      <td>'.$row['created_at'].'</td>
-      <td>'.$row['updated_at'].'</td>
-           </tr>';
+      <td><a href="">Deletar</a></td>     
+      </tr>';
 
        }
        echo '</table>';
