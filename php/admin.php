@@ -56,7 +56,7 @@ function get_all_stocks($conn){
       <td>'.$row['id'].'</td>
       <td>'.$row['symbol'].'</td>
       <td>'.$row['id_usuario'].'</td>
-      <td><a href="">Deletar</a></td>     
+      <td><a href="">Deletar</a></td> 
       </tr>';
 
        }

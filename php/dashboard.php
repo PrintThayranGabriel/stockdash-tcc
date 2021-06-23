@@ -89,7 +89,7 @@ require 'validatesession.php';
                 <form action="addinteresses.php" method="post">
                     <input id="real" name="interesse" type="text" placeholder="Digite o código da ação">
                     <input type="submit" value="Adicionar">
-                    <p>Consulte nossa <a href="">lista de ações</a></p>
+                    <p id="list">Consulte nossa <a href="">lista de ações</a></p>
                 </form>
             </div>
 
@@ -123,7 +123,7 @@ require 'validatesession.php';
     
                             echo '<span class="variation">';
                             echo number_format($response->results[0]->regularMarketChange, 2, '.', '').'%';
-                            echo '<img src="/meutcc/images/down-arrow.png">';
+                            echo '<i class="las la-arrow-down"></i>';
                             echo '</span>';
     
                             echo '<span class="date">';
@@ -148,7 +148,7 @@ require 'validatesession.php';
     
                             echo '<span class="variation">';
                             echo number_format($response->results[0]->regularMarketChange, 2, '.', '').'%';
-                            echo '<img src="/meutcc/images/up-arrow.png">';
+                            echo '<i class="las la-arrow-up"></i>';
                             echo '</span>';
     
                             echo '<span class="date">';
