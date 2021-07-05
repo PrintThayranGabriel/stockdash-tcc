@@ -1,6 +1,6 @@
 <?php
-error_reporting(0);
-ini_set(“display_errors”, 0 );
+// error_reporting(0);
+// ini_set(“display_errors”, 0 );
 ?>
 
 <?php
@@ -19,7 +19,7 @@ if(empty($response)) {
     </script>";
     return;
 }else{
-    $insert = mysqli_query($conn,"INSERT INTO `interesses`(id_usuario,symbol) VALUES('$id','$interesse')");
+    $insert = mysqli_query($conn,"INSERT INTO `interesses`(symbol, id_usuario) VALUES('$interesse' , '$id')");
     echo "<script>
     window.location.href = 'dashboard.php';
     </script>";

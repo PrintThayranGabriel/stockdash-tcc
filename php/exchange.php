@@ -14,7 +14,9 @@ require 'validatesession.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="shortcut icon" href="/meutcc/images/favicon.ico"/>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/exchange.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/meutcc/assets/conversor.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -84,12 +86,45 @@ require 'validatesession.php';
             </div>
         </header>
 
-        <div class="main">
-            
-        </div>
-        
+        <div id="container-interface">
+            <div id="interface">
+                <h1 id="titulo">Conversor de moedas</h1>
+                
+                <div class="inputs">
+                    <input id="entrada" type="number" placeholder="Quantidade">   
+                    <select id="moedas">
+                        <option value='NULL'>Selecione</option>
+                        <option value='EUR'>Euro</option>
+                        <option value='USD'>Dólar</option>
+                        <option value='USDT'>Dólar turismo</option>
+                        <option value='CAD'>Dólar canadense</option>
+                        <option value='AUD'>Dólar australiano</option>
+                        <option value='GBP'>Libra Esterlina</option>
+                        <option value='ARS'>Peso argentino</option>
+                        <option value='JPY'>Iene Japonês</option>
+                        <option value='CNY'>Yuan Chinês</option>
+                        <option value='CHF'>Franco Suíço</option>
+                        <option value='ILS'>Novo Shekel Israelense</option>
+                        <option value='BTC'>Bitcoin</option>
+                        <option value='ETH'>Ethereum</option>
+                        <option value='LTC'>Litecoin</option>
+                        <option value='DOGE'>Dogecoin</option>
+                        <option value='XRP'>XRP</option>
+                    </select>  
+
+                    <button onclick="converter()">Calcular</button>
+                </div>
+                
+                <div class="resultado">
+                    <h3 id="saida"></h3> 
+                    <span id="atualizacao"></span>
+                </div>
+                
+            </div>
+        </div>    
     </div>
-    
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>

@@ -11,7 +11,7 @@
             //verificando se o e-mail é valido
             if (filter_var($user_login, FILTER_VALIDATE_EMAIL)) {
                 //verificando se o e-mail ja existe
-                $check_login = mysqli_query($conn, "SELECT `email` FROM `usuarios` WHERE  = '$user_login'");
+                $check_login = mysqli_query($conn, "SELECT `email` FROM `usuarios` WHERE email  = '$user_login'");
                 if (mysqli_num_rows($check_login) > 0) {
                     echo "<h3>Esse email ja pertence a outra conta, tente outro email!</h3>";
                 } else
