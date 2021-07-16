@@ -109,6 +109,17 @@ require 'validatesession.php';
                         if($response->results[0]->regularMarketChange < 0){
 
                             echo '<div class="card-down">';
+                            echo'
+
+                            <form method="POST" action="deletestock.php">
+                                <input type="text" name="delete" value="delete" hidden>
+                                <input type="text" name="id_interesse" value="'.$item['id'].'" hidden> 
+                                <button type="submit">
+                                    <i class="las la-times"></i>
+                                </button>                         
+                            </form>
+                            
+                            ';
                             echo '<h1>';
                             echo $response->results[0]->symbol;
                             echo '</h1>';
@@ -134,6 +145,19 @@ require 'validatesession.php';
 
                         }else{
                             echo '<div class="card-up">';
+
+                            echo'
+
+                            <form method="POST" action="deletestock.php">
+                                <input type="text" name="delete" value="delete" hidden>
+                                <input type="text" name="id_interesse" value="'.$item['id'].'" hidden> 
+                                <button type="submit">
+                                    <i class="las la-times"></i>
+                                </button>                         
+                            </form>
+                            
+                            ';
+
                             echo '<h1>';
                             echo $response->results[0]->symbol;
                             echo '</h1>';
@@ -160,7 +184,6 @@ require 'validatesession.php';
                     }
 
                     ?>
-
                 </div>
             </div>
         </div>

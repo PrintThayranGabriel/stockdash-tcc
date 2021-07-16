@@ -171,7 +171,7 @@ header{
     border: none;
 }
 
-.addstock input[type="submit"]{
+input[type="submit"]{
     border: none;
     font-size: 1em;
     padding: 10px 20px;
@@ -194,10 +194,11 @@ header{
 }
 
 .card-up{
+    position: relative;
     background-color: #292f45;
     color: #FFF;
     padding: 2rem;
-    margin: 1rem;
+    margin: 1rem 1rem 2em 1em;
     border-radius: 10px;
     border-left: 4px solid var(--up-variation-color);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -211,11 +212,24 @@ header{
     max-height: 190px;
 }
 
+.card-up form button{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 10px;
+    right: 10px;
+    font-size: 26px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+
 .card-down{
+    position: relative;
     background-color: #292f45;
     color: #FFF;
     padding: 2rem;
-    margin: 1rem;
+    margin: 1rem 1rem 2em 1em;
     border-radius: 10px;
     border-left: 4px solid var(--down-variation-color);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -228,6 +242,19 @@ header{
     min-width: 200px;
     max-height: 190px;
 }
+
+.card-down form button{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 10px;
+    right: 10px;
+    font-size: 26px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+
 
 .card-up:hover{
     box-shadow: 0 14px 28px rgba(100, 100, 100, 0.048),0 10px 10px rgba(105, 105, 105, 0.096);
