@@ -15,7 +15,6 @@ if(isset($_POST['delete']) and isset($_POST['id_interesse'])) {
     
         if ($delete) {
             echo "<script>
-            alert('Ação descartada');
             window.location.href = 'dashboard.php';
             </script>";
             return; 
