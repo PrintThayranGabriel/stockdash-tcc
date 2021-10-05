@@ -69,7 +69,7 @@ require 'validatesession.php';
     <div class="container-content">
         <header>
             <div class="perfil">
-                <img class="foto" src="/meutcc/images/usuario-de-perfil.png" alt="foto de perfil">
+                <img class="foto" src="../images/usuario-de-perfil.png" alt="foto de perfil">
                 <p class="username">
                     <?=$_SESSION['nome'];?>
                 </p>

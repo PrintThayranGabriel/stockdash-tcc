@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$db_name = "db_stockdash";
+$username = "u708779117_admin";
+$password = "ThayranGabrielBiel19081#";
+$db_name = "u708779117_stockdash";
 
 $conn = mysqli_connect($servername, $username, $password, $db_name);
 

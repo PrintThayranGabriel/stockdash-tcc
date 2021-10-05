@@ -16,7 +16,8 @@
             <input type="password" name="senha" placeholder="Senha" required><br> 
             <input type="submit" value="Entrar">
          </form>
-         <p class="sign-in">Ainda não tem conta? <a id="cadastro" href="cadastro.php" >Cadastre-se</a><br></p>
+         <p class="sign-in">Ainda não tem conta? <a id="sign-up" href="cadastro.php" >Cadastre-se</a><br></p>
+         <p class="forget_password"><a id="reset_password" href="reset_password.php">Esqueci a senha</a></p>
       </div>
    </div>
 

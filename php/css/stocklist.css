@@ -134,194 +134,44 @@ header{
     margin-left: 200px;
 }
 
-.addstock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ---------------------------------------------- */
+
+
+.container-cards .cards{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
-.addstock p{
+.container-cards .cards .card {
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
     text-align: center;
-    margin-top: 10px;
-}
-
-.addstock a{
-    color: var(--texts-color);
-    cursor: pointer;
-}
-
-.addstock input[type="text"]{
-    border: 1px solid var(--background-color);
-    font-size: 1em;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    caret-color: #ddd;
-}
-
-.addstock input[type="text"]:focus{
-    outline: none;
-    box-shadow: 1px 1px 3px #ffffff;
-}
-
-input[type="submit"]{
-    border: none;
-    font-size: 1em;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-}
-
-.container-cards{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.cards{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-
-.card-up{
-    position: relative;
+    background: #FFF;
+    border-radius: 5px;
     background-color: #292f45;
-    color: #FFF;
-    padding: 2rem;
-    margin: 1rem 1rem 2em 1em;
-    border-radius: 10px;
-    border-left: 4px solid var(--up-variation-color);
+    color: #DDD;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-    transition: all .5s cubic-bezier(.25,.8,.25,1);
-    text-align: center;
-    width: 180px;
-    height: 200px;
+    transition: .3s;
 }
 
-.card-up h1{
+.container-cards .cards .card h1{
     font-size: 25px;
 }
 
-
-.card-up h2{
+.container-cards .cards .card h2{
     font-size: 15px;
 }
 
+.container-cards .cards .card p{}
 
-.card-up form button{
-    position: absolute;
-    background: none;
-    border: none;
-    top: 10px;
-    right: 10px;
-    font-size: 26px;
-    color: #ddd;
-    cursor: pointer;
-}
-
-
-.card-down{
-    position: relative;
-    background-color: #292f45;
-    color: #FFF;
-    padding: 2rem;
-    margin: 1rem 1rem 2em 1em;
-    border-radius: 10px;
-    border-left: 4px solid var(--down-variation-color);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-    transition: all .5s cubic-bezier(.25,.8,.25,1);
-    text-align: center;
-    width: 180px;
-    height: 200px;
-}
-
-.card-down h1{
-    font-size: 25px;
-}
-
-
-.card-down h2{
-    font-size: 15px;
-}
-
-
-.card-down form button{
-    position: absolute;
-    background: none;
-    border: none;
-    top: 10px;
-    right: 10px;
-    font-size: 26px;
-    color: #ddd;
-    cursor: pointer;
-}
-
-
-
-.card-up:hover{
+.container-cards .cards .card:hover {
     box-shadow: 0 14px 28px rgba(100, 100, 100, 0.048),0 10px 10px rgba(105, 105, 105, 0.096);
     transform: scale(1.02);
 }
 
-.card-down:hover{
-    box-shadow: 0 14px 28px rgba(100, 100, 100, 0.048),0 10px 10px rgba(105, 105, 105, 0.096);
-    transform: scale(1.02);
-}
-
-.card-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-
-}
-
-.date{
-    color: var(--texts-color);
-    text-align: center;
-    margin-top: 20px;
-}
-
-.price{
-    font-size: 2em;
-}
-
-.card-up .variation{
-    background-color: var(--up-variation-color);
-    align-self: flex-end;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.card-down .variation{
-    background-color: var(--down-variation-color);
-    align-self: flex-end;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.card-down img{
-    width: 10px;
-}
-
-.card-up img{
-    width: 10px;
-}
+/* ---------------------------------------------- */
 
 #preloader {
     position:fixed;

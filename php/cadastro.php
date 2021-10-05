@@ -27,6 +27,7 @@
             <input type="submit" value="Cadastrar"><br>
         </form>
         <p class="sign-in">Ja tem uma conta?<a id="cadastro" href="index.php" >Fazer Login</a><br></p>
+        
     </div>
    </div>
 </body> 

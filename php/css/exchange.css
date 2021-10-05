@@ -52,6 +52,7 @@ body{
     stroke-width: 2;
 }
 
+
 header{
     display: flex;
     justify-content: space-between;
@@ -60,7 +61,7 @@ header{
     background-color: var(--background-color);
     padding: 20px;
     border-radius: 10px;
-    margin: 5px 10px 0px 220px;
+    margin: 5px 10px 0px 195px;
 }
 
 #list{
@@ -123,7 +124,8 @@ header{
 .btn a{
     text-decoration: none;
     color: #FFF;
-    font-weight: lighter;
+    font-size: 15px;
+    font-weight: 100;
 }
 
 
@@ -262,4 +264,64 @@ button{
     color: #292f45;
     font-weight: bold;
     border-radius: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIAS QUERIES */
+
+@media (max-width: 800px) {
+    header{
+        margin: 10px;
+    }
+
+    #container-interface{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #interface .inputs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    #interface .inputs select{
+        width: 100%;
+    }
+
+    .container-sidebar{
+        display: none;
+    }
+
+    .main{
+        margin: 10px;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #container-interface{
+        margin: 5px;
+    }
+    
+    #interface{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type="submit"] {
+        border: none;
+        font-size: 1em;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+        margin-top: 10px;
+        width: 100%;
+    }
 }

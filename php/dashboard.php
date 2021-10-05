@@ -31,6 +31,22 @@ require 'validatesession.php';
     </div>
     <!-- fim do preloader --> 
 
+    <!-- Modal -->
+
+    <div id="modal">
+        <div class="modal_content">
+            <h2>Voce realmente quer sair?</h2>
+
+            <div class="modal_actions">
+                <form action="logout.php" method="post">
+                    <button class="logout" name="logout" type="submit">Sim</button>
+                </form>
+
+                <button id="close_modal">Não, voltar a navegação</button>
+            </div>
+        </div> 
+    </div>
+
     <div class="container">
         <div class="container-sidebar">
 
@@ -67,29 +83,29 @@ require 'validatesession.php';
     <div class="container-content">
         <header>
             <div class="perfil">
-                <img class="foto" src="/meutcc/images/usuario-de-perfil.png" alt="foto de perfil">
+                <img class="foto" src="../images/usuario-de-perfil.png" alt="foto de perfil">
                 <p class="username">
                     <?=$_SESSION['nome'];?>
                 </p>
 
-                <form action="logout.php" method="post">
-                    <button class="logout" name="logout" type="submit">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-                            <path d="M7 12h14l-3 -3m0 6l3 -3" />
-                            </svg>
-                    </button>
-                </form>
+                
+                <button id="open_modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                    </svg>
+                </button>
+
             </div>
         </header>
 
         <div class="main">
             <div class="addstock">
                 <form action="addinteresses.php" method="post">
-                    <input id="real" name="interesse" type="text" placeholder="Digite o código da ação">
+                    <input id="real" name="interesse" type="text" placeholder="Digite o código da ação" required>
                     <input type="submit" value="Adicionar">
-                    <p id="list">Consulte nossa <a href="">lista de ações</a></p>
+                    <p id="list">Consulte as <a href="">ações suportadas</a></p>
                 </form>
             </div>
 
@@ -188,6 +204,9 @@ require 'validatesession.php';
             </div>
         </div>
     </div>
+
+
+    <script src="../assets/modal.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 

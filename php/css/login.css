@@ -56,10 +56,18 @@ input[type="text"],input[type="password"]{
     margin-top: 20px;
 }
 
-a{
+#sign-up{
     padding: 7px;
     border: 1px solid rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
+    color: #1E2329;
+}
+
+.forget_password{
+    margin-top: 20px;
+}
+
+#reset_password{
     color: #1E2329;
 }
